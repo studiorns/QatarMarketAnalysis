@@ -17,13 +17,15 @@ const qatarData = {
     },
     flightSearches: {
         // Actual flight search data from Country Data.csv
-        '2023': [907, 468, 889, 893, 644, 572, 486, 756, 701, 948, 716, 762],
-        '2024': [626, 554, 499, 450, 364, 744, 412, 269, 435, 745, 489, 931]
+        '2023': [7322, 6055, 8513, 9437, 6218, 6277, 5126, 5250, 6454, 8582, 7139, 8381],
+        '2024': [6620, 6087, 6816, 6452, 5441, 6439, 4447, 4844, 7030, 8060, 7163, 10138],
+        '2025': [6998, 6774, 8955, 5523, 7434, 5589, 4499, null, null, null, null, null]
     },
     hotelGuests: {
         // Actual hotel guest data from Country Data.csv
         '2023': [1853, 1551, 2400, 2527, 1429, 2500, 4230, 3919, 1376, 3147, 1519, 3749],
-        '2024': [2725, 2641, 1317, 3787, 1783, 4559, 5738, 7413, 2472, 3893, 2340, 4661]
+        '2024': [2725, 2641, 1317, 3787, 1783, 4559, 5738, 7413, 2472, 3893, 2340, 4661],
+        '2025': [3146, 2802, 1481, 3976, 2167, 5079, null, null, null, null, null, null]
     }
 };
 
@@ -312,6 +314,14 @@ function initCharts() {
                     backgroundColor: 'rgba(255, 159, 64, 0.1)',
                     borderWidth: 2,
                     fill: false
+                },
+                {
+                    label: '2025',
+                    data: qatarData.flightSearches['2025'],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.1)',
+                    borderWidth: 2,
+                    fill: false
                 }
             ]
         },
@@ -383,6 +393,14 @@ function initCharts() {
                     data: qatarData.hotelGuests['2024'],
                     borderColor: 'rgba(255, 159, 64, 1)',
                     backgroundColor: 'rgba(255, 159, 64, 0.1)',
+                    borderWidth: 2,
+                    fill: false
+                },
+                {
+                    label: '2025',
+                    data: qatarData.hotelGuests['2025'],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.1)',
                     borderWidth: 2,
                     fill: false
                 }
